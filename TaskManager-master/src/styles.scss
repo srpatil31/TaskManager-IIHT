@@ -1,0 +1,85 @@
+    nav a{
+	padding: 5px 10px;
+	text-decoration: none;
+	margin-top: 10px;
+	display: inline-block;
+	background-color: #eee;
+	border-radius: 4px;
+	}
+	
+	nav a:visited, a:link{
+	color:#607D8B;
+	margin: 10px;
+	}
+	
+	nav a:hover{
+	color:#039be5;
+	background-color: #CFD8DC;
+	}
+	
+	nav a.active{
+	color:#039be5;
+	}
+
+	.Table{
+		display:table;
+		padding:10px;
+		}
+		
+		.Row{
+		display:table-row;
+		}
+		
+		.Cell{
+		display:table-cell;
+		border:no-bolder;
+		padding-left:5px;
+		padding-right:5px;
+		}
+	
+	input[type=text]{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-top: 6px;
+	}
+	
+	input:focus{
+	background: #fff;
+	border:1px solid #555;
+	box-shadow: 0 0 3px #aaa;
+	}
+	
+	input:required{
+	background-size: 20px;
+	background-position: right;
+	}
+	
+	input:focus:invalid{
+	background-size: 20px;
+	background-position: right;
+	border-color: #b03535
+	}
+	
+	input:required:valid{
+	background-size: 20px;
+	background-position: right;
+	border-color:#039be5;
+	}
+	
+	input[type=submit] {
+	background-color:#039be5;
+	color: white;
+	padding:5px;
+	margin:10px 10px 10px 0px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	}
+	
+	.spanBlock{
+	background-color:#D3D3D3;
+	border: 1px solid #ccc;
+	padding:0px 10px 0px 10px;
+	}

@@ -1,0 +1,59 @@
+<form [formGroup]="fromTaskManager" (ngSubmit)="EditTask(fromTaskManager.value)">
+<div class="Table">
+
+  <input type="hidden" formControlName="Task_Id" id="txtTaskId" />
+    <div class="Row">
+      <div class="Cell">
+        <label>Task:</label>
+      </div>
+      <div class="Cell">
+        <input type="text" formControlName="Task_Name" id="txtTask" required/>
+      </div>
+    </div>
+  
+    <div class="Row">
+      <div class="Cell">
+        <label>Prioroty:</label>
+      </div>
+      <div class="Cell">
+        <input type="range" formControlName="Priority" id="txtPrioroty" min="0" max="30" value="1" class="slider"/>
+      </div>
+    </div>
+  
+    <div class="Row">
+      <div class="Cell">
+        <label>Parent Task:</label>
+      </div>
+      <div class="Cell">
+        <input type="text" formControlName="Parent_Id" id="txtParentTask" required/>
+      </div>
+    </div>
+  
+    <div class="Row">
+      <div class="Cell">
+        <label>Start Date:</label>
+      </div>
+      <div class="Cell">
+        <input type="text" formControlName="Start_Date" id="txtStartDate" required/>
+      </div>
+    </div>
+  
+    <div class="Row">
+      <div class="Cell">
+        <label>End Date:</label>
+      </div>
+      <div class="Cell">
+        <input type="text" formControlName="End_Date" id="txtEndDate" required/>
+      </div>
+    </div>
+  
+    <div class="Row">
+      <div class="Cell">
+      </div>
+      <div class="Cell">
+        <input type="submit" value="Update">
+        <input type="submit" value="Cancel" (click)="Reset()">
+      </div>
+    </div>
+  </div>
+</form>

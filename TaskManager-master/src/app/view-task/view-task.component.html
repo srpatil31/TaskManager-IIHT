@@ -1,0 +1,37 @@
+<table>
+    <tr>
+        <td><label>Task:</label></td>
+        <td colspan="4"><input type="text" [(ngModel)]="task" on-focusout="FilterTaskManager()" /></td>
+
+        <td><label>Parent Task:</label></td>
+        <td colspan="4"><input type="text" [(ngModel)]="parentTask"  on-focusout="FilterTaskManager()"/></td>
+    </tr>
+    <tr>
+        <td><label>Priority From:</label></td>
+        <td><input type="text" [(ngModel)]="priorityFrom" on-focusout="FilterTaskManager()"/></td>
+        <td><label>Priority to:</label></td>    
+        <td><input type="text" [(ngModel)]="priorityTo" on-focusout="FilterTaskManager()"/></td>
+
+        <td><label>Start Date:</label></td>
+        <td><input type="text" [(ngModel)]="dateFrom" on-focusout="FilterTaskManager()"/></td>
+        <td><label>End Date:</label></td>    
+        <td><input type="text" [(ngModel)]="dateTo" on-focusout="FilterTaskManager()"/></td>
+    </tr>
+</table>
+
+<hr/>
+
+<table>
+    <tr><td>Task</td><td>Parent</td><td>Priorty</td><td>Start</td><td>End</td></tr>
+    <tbody>
+        <tr *ngFor="let TaskManager of allTaskManager|async">
+            <td><span class="spanBlock">{{TaskManager.Task_Name}}</span></td>
+            <td><span class="spanBlock">{{TaskManager.ParentTask_Name}}</span></td>
+            <td><span>{{TaskManager.Priority}}</span></td>
+            <td><span>{{TaskManager.Start_Date }}</span></td>
+            <td><span>{{TaskManager.End_Date }}</span></td>
+            <td><input type="submit" value="Edit" (click)="goToPage(TaskManager.Task_Id)"></td>
+            <td><input type="submit" value="End Task" (click)="DeleteTask(TaskManager.Task_Id)"></td>
+        </tr>
+    </tbody>
+</table>

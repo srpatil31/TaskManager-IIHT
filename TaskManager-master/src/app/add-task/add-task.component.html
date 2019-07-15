@@ -1,0 +1,58 @@
+<form [formGroup]="fromTaskManager" (ngSubmit)="AddTask(fromTaskManager.value)">
+  <div class="Table">
+
+  <div class="Row">
+    <div class="Cell">
+      <label>Task:</label>
+    </div>
+    <div class="Cell">
+      <input type="text" id="txtTask" formControlName="Task_Name" required/>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+      <label>Prioroty:</label>
+    </div>
+    <div class="Cell">
+      <input type="range" id="txtPrioroty" formControlName="Priority" min="1" max="30" value="1"/>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+      <label>Parent Task:</label>
+    </div>
+    <div class="Cell">
+      <input type="text" id="txtParentTask" formControlName="Parent_Id" required/>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+      <label>Start Date:</label>
+    </div>
+    <div class="Cell">
+      <input type="text" id="txtStartDate" formControlName="Start_Date" required/>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+      <label>End Date:</label>
+    </div>
+    <div class="Cell">
+      <input type="text" id="txtEndDate" formControlName="End_Date" required/>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+    </div>
+    <div class="Cell">
+      <input type="submit" value="Add">
+      <input type="submit" value="Reset" (click)="Reset()">
+    </div>
+  </div>
+</div>
+</form>
